@@ -4,7 +4,7 @@ var gpio = require('rpi-gpio');
 gpio.setup(7, gpio.DIR_OUT);
 
 app.get('/', function(req, res) {
-  res.send('Hello from Watering')
+  res.send('<html><body><a href=/on>On</a><br><a href=/off>Off</a><br><a href=/check>Check</a><br></body></html>')
 });
 
 app.get('/on', function(req, res) {
